@@ -1,0 +1,29 @@
+.container {
+    width: var(--Grid__width);
+    max-width: var(--Grid__maxWidth);
+    padding-left: var(--Grid__padding--sm);
+    padding-right: var(--Grid__padding--sm);
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (--desktop) {
+        padding-left: var(--Grid__padding--lg);
+        padding-right: var(--Grid__padding--lg);
+    }
+
+    &--full {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /*prevents Double padding on nested containers*/
+    & .container {
+        padding-right: 0;
+        padding-left: 0;
+
+        @media (--desktop) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
