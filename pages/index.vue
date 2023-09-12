@@ -1,5 +1,6 @@
 <template>
-  <h1>Home page</h1>
+    <NavBar />
+    <Hero />
 </template>
 
 <script>
@@ -7,9 +8,6 @@ export default {
 
 }
 </script>
+<style lang="postcss">
 
-<style>
-    h1 {
-        font-size: 1 rem;        
-    }
 </style>
