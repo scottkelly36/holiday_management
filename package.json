@@ -11,5 +11,14 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "nuxt": "^3.7.1"
+  },
+  "dependencies": {
+    "postcss": "^8.4.29",
+    "postcss-calc": "^9.0.1",
+    "postcss-custom-media": "^10.0.0",
+    "postcss-loader": "^7.3.3",
+    "postcss-mixins": "^9.0.4",
+    "postcss-nested": "^6.0.1",
+    "postcss-simple-vars": "^7.0.1"
   }
 }
