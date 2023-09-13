@@ -1,6 +1,7 @@
 <template>
     <NavBar />
     <Hero />
+    <Features />
 </template>
 
 <script>
