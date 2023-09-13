@@ -1,0 +1,55 @@
+@define-mixin buttonSolid $background-color, $hover-backgroundColor, $color, $hover-color, $padding-vertical,
+    $padding-horizontal, $font-size {
+    background: $background-color;
+    font-size: $font-size;
+    padding: $padding-vertical $padding-horizontal;
+    color: $color;
+    transition:
+        ease-in-out background 1s,
+        ease-in-out color 0.5s;
+    border-radius: 0.5rem;
+    border: none;
+
+    &:hover {
+        background: $hover-backgroundColor;
+        color: $hover-color;
+        box-shadow: var(--card-shadow);
+    }
+}
+
+@define-mixin buttonGradient $background-color, $hover-backgroundColor, $color, $hover-color, $padding-vertical,
+    $padding-horizontal, $font-size {
+    background: radial-gradient(circle, $background-color 30%, $hover-backgroundColor 70%);
+    font-size: $font-size;
+    padding: $padding-vertical $padding-horizontal;
+    color: $color;
+    transition:
+        ease-in-out background 1s,
+        ease-in-out color 0.5s;
+    border-radius: 0.5rem;
+    border: none;
+
+    &:hover {
+        background: radial-gradient(circle, $hover-backgroundColor 30%, $background-color 70%);
+        color: $hover-color;
+        box-shadow: var(--card-shadow);
+    }
+}
+
+@define-mixin buttonOutline $background-color, $color, $hover-color, $padding-vertical, $padding-horizontal, $font-size {
+    background: none;
+    border: solid 2px $background-color;
+    font-size: $font-size;
+    padding: $padding-vertical $padding-horizontal;
+    color: $color;
+    transition:
+        ease-in-out background 0.5s,
+        ease-in-out color 0.5s;
+    border-radius: 0.5rem;
+
+    &:hover {
+        background: $background-color;
+        color: $hover-color;
+        box-shadow: var(--card-shadow);
+    }
+}

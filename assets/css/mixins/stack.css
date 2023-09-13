@@ -1,0 +1,5 @@
+@define-mixin stack $val: 0 {
+    display: flex;
+    flex-direction: column;
+    row-gap: $val;
+}

@@ -1,0 +1,51 @@
+@import '../settings/vars.css';
+@import '../mixins/button.css';
+
+/*Solid Buttons*/
+
+.button--primary {
+  @mixin buttonSolid var(--primary), #eb5564, var(--white), var(--white),
+    var(--spacing-sm), var(--spacing), 1.2rem;
+}
+
+.button--secondary {
+  @mixin buttonSolid var(--secondary),  #a86b5d, var(--white), var(--white),
+    var(--spacing-sm), var(--spacing), 1.2rem;
+}
+
+.button--tertiary {
+  @mixin buttonSolid var(--tertiary), #4311a1, var(--white), var(--white),
+    var(--spacing-sm), var(--spacing), 1.2rem;
+}
+
+.button--black {
+  @mixin buttonSolid var(--black), var(--white), var(--white), var(--black),
+    var(--spacing-sm), var(--spacing), 1.2rem;
+}
+
+.button--white {
+  @mixin buttonSolid var(--white), var(--black), var(--black), var(--white),
+    var(--spacing-sm), var(--spacing), 1.2rem;
+}
+
+/*Outline Buttons*/
+
+.button__outline--primary {
+  @mixin buttonOutline var(--primary), var(--primary), var(--white),
+    var(--spacing-sm), var(--spacing), 1.2rem;
+}
+
+.button__outline--secondary {
+  @mixin buttonOutline var(--secondary), var(--secondary), var(--white),
+  var(--spacing-sm), var(--spacing), 1.2rem;
+}
+
+.button__outline--tertiary {
+  @mixin buttonOutline var(--tertiary), var(--tertiary), var(--white),
+    var(--spacing-sm), var(--spacing), 1.2rem;
+}
+
+.button__outline--black {
+  @mixin buttonOutline var(--black), var(--black), var(--white),
+    var(--spacing-sm), var(--spacing), 1.2rem;
+}
