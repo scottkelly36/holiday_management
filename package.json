@@ -13,6 +13,7 @@
     "nuxt": "^3.7.1"
   },
   "dependencies": {
+    "gsap": "^3.12.2",
     "postcss": "^8.4.29",
     "postcss-calc": "^9.0.1",
     "postcss-custom-media": "^10.0.0",
