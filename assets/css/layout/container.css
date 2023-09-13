@@ -1,3 +1,5 @@
+@import '../mixins/stack.css';
+
 .container {
     width: var(--Grid__width);
     max-width: var(--Grid__maxWidth);
@@ -26,4 +28,8 @@
             padding-right: 0;
         }
     }
+}
+
+.Form__container {
+    @mixin stack var(--spacing-md);
 }
