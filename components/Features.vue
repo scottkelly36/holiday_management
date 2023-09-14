@@ -39,7 +39,6 @@ export default {
     .Features {
         @mixin row var(--spacing-xl);
         padding-top: var(--spacing-xl);
-        padding-left: 0;
-        padding-right: 0;
+        padding-bottom: var(--spacing-xl);
     }
 </style>
