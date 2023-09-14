@@ -1,6 +1,6 @@
 <template>
   <section class="Features container">
-    <template v-for="(feature, index) in this.features" :key='index'>
+    <template v-for="(feature, index) in features" :key='index'>
         <FeaturedItem :feature="feature" />
     </template>
   </section>
@@ -38,6 +38,7 @@ export default {
 
     .Features {
         @mixin row var(--spacing-xl);
+        padding-top: var(--spacing-xl);
         padding-left: 0;
         padding-right: 0;
     }

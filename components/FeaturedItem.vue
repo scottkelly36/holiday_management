@@ -28,6 +28,11 @@ export default {
 @import '../assets/css/mixins/stack.css';
 
     .FeatureItem {
-        @mixin stack var(--spacing);
+        @mixin stack var(--spacing-md);
+    }
+
+    .FeatureItem .icon {
+        width: 3rem;
+        height: 3rem;
     }
 </style>
