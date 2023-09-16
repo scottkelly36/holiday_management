@@ -1,15 +1,19 @@
 <template>
   <NavBar />
-  <Hero />
-  <Features />
-  <BaseSlider :carousel-settings="carouselSettings">
+  <main class="PageContent">
+    <Hero />
+    <Features />
+    <BaseSlider :carousel-settings="carouselSettings">
     <PropertyCard
       v-for="(property, index) in carouselSlides"
       :key="index"
       :property="property"
       class="swiper-slide"
     />
-  </BaseSlider>
+    </BaseSlider>
+  </main>
+  
+  
   <Footer />
 </template>
 
@@ -95,4 +99,8 @@ export default {
 };
 </script>
 <style lang="postcss">
+@import '../assets//css//mixins/stack.css';
+.PageContent {
+    @mixin stack var(--spacing-xl);
+}
 </style>
