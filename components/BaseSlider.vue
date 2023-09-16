@@ -28,11 +28,15 @@ export default {
             required: true,
         }
     },
+    mounted() {
+        this.carousel = this.initSwiper();
+    },
+
+    
     methods: {
         initSwiper() {
-            return new Swiper(this.$refs.carousel, {
-                grabCursor: true,
-                slidesPerView: 1,
+            return new Swiper(this.$refs.carousel,{
+                slidesPerView: 3,
                 spaceBetween: 30,
                 navigation: {
                     nextEl: 'BaseCarousel__nav__btn--next',
@@ -49,6 +53,7 @@ export default {
 
     .BaseCarousel__container {
         @mixin stack var(--spacing);
+        overflow: hidden;
     }
 
     .BaseCarousel__nav {
