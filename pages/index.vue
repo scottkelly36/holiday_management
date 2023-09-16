@@ -12,8 +12,6 @@
     />
     </BaseSlider>
   </main>
-  
-  
   <Footer />
 </template>
 
