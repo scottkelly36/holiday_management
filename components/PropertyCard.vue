@@ -39,12 +39,28 @@ export default {
 <style>
 @import '../assets/css/mixins/stack.css';
 .PropertyCard {
-    width: 250px;
-    height: 300px;
+    @mixin stack var(--spacing-sm);
+
+    max-width: 300px;
+    height: 400px;
+}
+.PropertyCard__image__container{
+    width: 100%;
+    height: 50%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.PropertyCard__image {
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .PropertyCard__text__container {
-    @mixin stack var(--spacing-sm)
+    @mixin stack var(--spacing-sm);
+
+    padding-left: var(--spacing-xs);
+    padding-right: var(--spacing-xs);
 }
 
 .PropertyCard__text__topLine {
