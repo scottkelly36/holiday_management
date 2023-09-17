@@ -3599,11 +3599,6 @@ lodash.memoize@^4.1.2:
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
   integrity sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==
 
-lodash.merge@^4.6.2:
-  version "4.6.2"
-  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
-  integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
-
 lodash.pick@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.pick/-/lodash.pick-4.4.0.tgz#52f05610fff9ded422611441ed1fc123a03001b3"
@@ -5957,13 +5952,6 @@ vue-router@^4.2.4:
   integrity sha512-9PISkmaCO02OzPVOMq2w82ilty6+xJmQrarYZDkjZBfl4RvYAlt4PKnEX21oW4KTtWfa9OuO/b3qk1Od3AEdCQ==
   dependencies:
     "@vue/devtools-api" "^6.5.0"
-
-vue-simple-accordion@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/vue-simple-accordion/-/vue-simple-accordion-0.1.0.tgz#95b667f78c742719101f858c4e24ba2eb0eea1bc"
-  integrity sha512-y5oovH55smiNkEZ4lWLpE7H9t0TTYofN/zo4/NTap6Va/Ob+WlU7eRA2nzbFIaJUqk4cXHPJbLUblxU1jAL98g==
-  dependencies:
-    lodash.merge "^4.6.2"
 
 vue@^3.3.4:
   version "3.3.4"
