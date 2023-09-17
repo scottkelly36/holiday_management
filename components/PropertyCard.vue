@@ -68,4 +68,9 @@ export default {
     justify-content: space-between;
 }
 
+.PropertyCard__price {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
 </style>

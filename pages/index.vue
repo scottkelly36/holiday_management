@@ -4,19 +4,20 @@
     <Hero />
     <Features />
     <BaseSlider :carousel-settings="carouselSettings">
-    <PropertyCard
-      v-for="(property, index) in carouselSlides"
-      :key="index"
-      :property="property"
-      class="swiper-slide"
-    />
+      <SwiperSlide v-for="(property, index) in carouselSlides" :key="index">
+        <PropertyCard :property="property" />
+      </SwiperSlide>
     </BaseSlider>
   </main>
   <Footer />
 </template>
 
 <script>
+import { SwiperSlide } from 'swiper/vue';
 export default {
+  components: {
+      SwiperSlide
+    },
   data() {
     return {
       carouselSlides: [
@@ -97,8 +98,8 @@ export default {
 };
 </script>
 <style lang="postcss">
-@import '../assets//css//mixins/stack.css';
+@import "../assets//css//mixins/stack.css";
 .PageContent {
-    @mixin stack var(--spacing-xl);
+  @mixin stack var(--spacing-xl);
 }
 </style>

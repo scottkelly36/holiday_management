@@ -1,79 +1,49 @@
 <template>
     <div class="BaseCarousel__container container">
-        <h2>Swiper Title</h2>
-        <p class="text__small">small Description of the swiper images</p>
-        <div ref="carousel" class="swiper-container">
-            <div class="swiper-wrapper">
-                <slot />
-            </div>
-            <div class="BaseCarousel__nav">
-                <button type="button" class="BaseCarousel__nav__btn BaseCarousel__nav__btn--prev">
-                    <BaseIcon use="Chevron"/>
-                </button>
-                <button type="button" class="BaseCarousel__nav__btn BaseCarousel__nav__btn--next">
-                    <BaseIcon use="Chevron"/>
-                </button>
-            </div>
-        </div>
+      <h2>Swiper Title</h2>
+      <p class="text__small">Small Description of the swiper images</p>
+      <swiper :slidesPerView="1"
+      :spaceBetween="30"
+      :loop="true">
+        <slot />
+        <SliderNavigation />
+      </swiper>
     </div>
-</template>
-
-<script>
-import Swiper from 'swiper';
-
-export default {
-    props: {
-        carouselSettings: {
-            type: Object, 
-            required: true,
-        }
+  </template>
+  
+  <script>
+  import { Swiper, SwiperSlide } from 'swiper/vue';
+import  SliderNavigation  from './SliderNavigation.vue';
+  
+  export default {
+    components: {
+      Swiper,
+      SwiperSlide,
+      SliderNavigation
     },
-    mounted() {
-        this.carousel = this.initSwiper();
-    },
-
-    
-    methods: {
-        initSwiper() {
-            return new Swiper(this.$refs.carousel,{
-                slidesPerView: 3,
-                spaceBetween: 30,
-                navigation: {
-                    nextEl: 'BaseCarousel__nav__btn--next',
-                    prevEl: 'BaseCarousel__nav__btn--prev',
-                }
-            })
+    data() {
+      return {
+        swiperParams: {
+          slidesPerView: 6,
+          spaceBetween: 30
         }
+      };
     }
-}
-</script>
+  };
+  </script>
+  
+  <style>
+  @import '../assets/css/mixins/stack.css';
+  
+  .BaseCarousel__container {
+      @mixin stack var(--spacing);
+      overflow: hidden;
+  }
 
-<style>
-@import '../assets/css/mixins/stack.css';
-
-    .BaseCarousel__container {
-        @mixin stack var(--spacing);
-        overflow: hidden;
-    }
-
-    .BaseCarousel__nav {
-        display: flex;
-        gap: var(--spacing);
-    }
-
-    .BaseCarousel__nav__btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--grey);
-        height: 2rem;
-        width: 2rem;
-        border: none;
-        color: var(--black);
-        border-radius: 50%;
-    }
-
-    .BaseCarousel__nav__btn--prev {
-        rotate: 180deg;
-    }
-</style>
+  .swiper-slide {
+    width: fit-content !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  </style>
