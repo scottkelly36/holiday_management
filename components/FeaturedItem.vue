@@ -17,7 +17,7 @@ export default {
     },
     props: {
         feature: {
-            type: Array,
+            type: Object,
             required: true,
         }
     }
