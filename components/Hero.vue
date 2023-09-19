@@ -1,14 +1,27 @@
 <template>
   <section class="TheHero container">
     <HolidayBuilder />
-    <img  class="TheHero__img" src="/images/the_hero_image.jpg" alt="">
+    <img class="TheHero__img" :src='heroImage' alt="">
   </section>
 </template>
 
 <script>
 export default {
+  props: {
+    content: {
+      type: Object,
+    }
+  },
 
-}
+  computed: {
+    heroImage() {
+      console.log(this.content.content.image);
+      return this.content.content.image;
+    },
+  },
+};
+
+
 </script>
 
 <style>

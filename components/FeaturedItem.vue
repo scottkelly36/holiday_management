@@ -1,9 +1,9 @@
 <template>
   <div class="FeatureItem">
-    <BaseIcon :use="feature.icon"/>
-    <h3>{{feature.heading}}</h3>
+    <BaseIcon :use="feature.featureIcon"/>
+    <h3>{{feature.featureHeading}}</h3>
     <p class="text-small">
-        {{ feature.copy }}
+        {{ feature.featureCopy }}
     </p>
   </div>
 </template>
@@ -17,7 +17,7 @@ export default {
     },
     props: {
         feature: {
-            type: Object,
+            type: Array,
             required: true,
         }
     }

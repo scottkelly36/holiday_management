@@ -1,6 +1,6 @@
 <template>
   <section class="Features container">
-    <template v-for="(feature, index) in features" :key='index'>
+    <template v-for="(feature, index) in content.content" :key='index'>
         <FeaturedItem :feature="feature" />
     </template>
   </section>
@@ -8,28 +8,12 @@
 
 <script>
 export default {
-    data() {
-        return {
-            features: [
-                {
-                    icon: 'Shield',
-                    heading: 'Book with confidence',
-                    copy: 'Get 24/7 support and discover helpful reviews from our trusted community of guests.'
-                },
-                {
-                    icon: 'Food',
-                    heading: 'Get the amenities you want',
-                    copy: 'Hot tubs, pools, BBQs – explore dozens of great extras that fit your needs.'
-                },
-                {
-                    icon: 'Calender',
-                    heading: 'Keep it flexible',
-                    copy: 'Stays with flexible cancellation make it easy to rebook if your plans change.'
-                },
-    
-            ]
+    props: {
+        content: {
+            type: Object,
+            required: true,
         }
-    }, 
+    }
 }
 </script>
 

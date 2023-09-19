@@ -1,25 +1,25 @@
 <template>
   <div class="PropertyCard">
     <div class="PropertyCard__image__container">
-        <img :src="property.propertyImage" alt="" class="PropertyCard__image">
+        <img :src="content.propertyImage" alt="" class="PropertyCard__image">
     </div>
     <div class="PropertyCard__text__container">
         <div class="PropertyCard__text__topLine">
             <h4 class="PropertyCard__name">
-                {{ property.propertyName }}
+                {{ content.propertyName }}
             </h4>
             <div class="PropertyCard__rating">
                 <BaseIcon use="Star" />
-                {{ property.propertyRating }}
+                {{ content.propertyRating }}
             </div>
         </div>
         <p class="text--small">
-            {{ property.propertyCopy }}
+            {{ content.propertyCopy }}
         </p>
         <div class="PropertyCard__price">
             <p class="currency"></p>
-            <p class="cost">{{  property.propertyCost   }}</p>
-            <p class="frequency">{{ property.propertyFrequency}}</p>
+            <p class="cost">{{  content.propertyCost   }}</p>
+            <p class="frequency">{{ content.propertyFrequency}}</p>
         </div>
     </div>
   </div>
@@ -28,7 +28,7 @@
 <script>
 export default {
     props: {
-        property: {
+        content: {
             type: Object,
             required: true,
         },

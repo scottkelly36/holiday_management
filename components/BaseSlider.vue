@@ -5,21 +5,32 @@
       <swiper :slidesPerView="1"
       :spaceBetween="30"
       :loop="true">
-        <slot />
+        <SwiperSlide v-for="(slide, index) in content.content" :key="index">
+            <component :is="content.child" :content="slide"/>
+        </SwiperSlide>
         <SliderNavigation />
       </swiper>
     </div>
   </template>
   
   <script>
-  import { Swiper, SwiperSlide } from 'swiper/vue';
-import  SliderNavigation  from './SliderNavigation.vue';
+    import { Swiper, SwiperSlide } from 'swiper/vue';
+    import  SliderNavigation  from './SliderNavigation.vue';
+    import PropertyCard from './PropertyCard.vue';
   
   export default {
+    props: {
+        content: {
+            type: Object,
+            required: true,
+        },
+
+    },
     components: {
       Swiper,
       SwiperSlide,
-      SliderNavigation
+      SliderNavigation,
+      PropertyCard,
     },
     data() {
       return {

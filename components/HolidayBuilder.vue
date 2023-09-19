@@ -3,7 +3,6 @@
         <h2>Build your dream get away!</h2>
         <p>not sure where to go let us make some suggestions</p>
         <form action="" class="Form__container">
-            <label for="location">Location</label>
             <Select class="FormInput FormInput__select">
                 <option value="">Anywhere</option>
             </Select>

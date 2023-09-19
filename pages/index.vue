@@ -1,90 +1,117 @@
 <template>
   <NavBar />
-  <main class="PageContent">
-    <Hero />
-    <Features />
-    <BaseSlider :carousel-settings="carouselSettings">
-      <SwiperSlide v-for="(property, index) in carouselSlides" :key="index">
-        <PropertyCard :property="property" />
-      </SwiperSlide>
-    </BaseSlider>
-  </main>
-  <Footer />
+  <PageContent :page-content="pageContent" />
 </template>
 
 <script>
-import { SwiperSlide } from 'swiper/vue';
+import { SwiperSlide } from "swiper/vue";
 export default {
   components: {
-      SwiperSlide
-    },
+    SwiperSlide,
+  },
   data() {
     return {
-      carouselSlides: [
+      pageContent: [
         {
-          propertyImage: "/images/houses/house1.jpg",
-          propertyName: "London",
-          propertyRating: "2",
-          propertyCopy: "A property in the heart of London",
-          propertyCost: "500",
-          propertyFrequency: "PP/Night",
+          block: "Hero",
+          content: {
+            image: "/images/the_hero_image.jpg",
+          },
         },
         {
-          propertyImage: "/images/houses/house2.jpg",
-          propertyName: "Newcastle",
-          propertyRating: "4.7",
-          propertyCopy: "A property in the heart of London",
-          propertyCost: "500",
-          propertyFrequency: "PP/Night",
+          block: "Features",
+          content: [
+            {
+              featureIcon: "Shield",
+              featureHeading: "Book with confidence",
+              featureCopy:
+                "Get 24/7 support and discover helpful reviews from our trusted community of guests.",
+            },
+            {
+              featureIcon: "Food",
+              featureHeading: "Get the amenities you want",
+              featureCopy:
+                "Hot tubs, pools, BBQs – explore dozens of great extras that fit your needs.",
+            },
+            {
+              featureIcon: "Calender",
+              featureHeading: "Keep it flexible",
+              featureCopy:
+                "Stays with flexible cancellation make it easy to rebook if your plans change.",
+            },
+          ],
         },
         {
-          propertyImage: "/images/houses/house3.jpg",
-          propertyName: "Glasgow",
-          propertyRating: "4",
-          propertyCopy: "A property in the heart of London",
-          propertyCost: "500",
-          propertyFrequency: "PP/Night",
+          block: "BaseSlider",
+          child: "PropertyCard",
+          content: [
+            {
+              propertyImage: "/images/houses/house1.jpg",
+              propertyName: "London",
+              propertyRating: "2",
+              propertyCopy: "A property in the heart of London",
+              propertyCost: "500",
+              propertyFrequency: "PP/Night",
+            },
+            {
+              propertyImage: "/images/houses/house2.jpg",
+              propertyName: "Newcastle",
+              propertyRating: "4.7",
+              propertyCopy: "A property in the heart of London",
+              propertyCost: "500",
+              propertyFrequency: "PP/Night",
+            },
+            {
+              propertyImage: "/images/houses/house3.jpg",
+              propertyName: "Glasgow",
+              propertyRating: "4",
+              propertyCopy: "A property in the heart of London",
+              propertyCost: "500",
+              propertyFrequency: "PP/Night",
+            },
+            {
+              propertyImage: "/images/houses/house4.jpg",
+              propertyName: "Manchester",
+              propertyRating: "4.7",
+              propertyCopy: "A property in the heart of London",
+              propertyCost: "500",
+              propertyFrequency: "PP/Night",
+            },
+            {
+              propertyImage: "/images/houses/house1.jpg",
+              propertyName: "London",
+              propertyRating: "2",
+              propertyCopy: "A property in the heart of London",
+              propertyCost: "500",
+              propertyFrequency: "PP/Night",
+            },
+            {
+              propertyImage: "/images/houses/house2.jpg",
+              propertyName: "Newcastle",
+              propertyRating: "4.7",
+              propertyCopy: "A property in the heart of London",
+              propertyCost: "500",
+              propertyFrequency: "PP/Night",
+            },
+            {
+              propertyImage: "/images/houses/house3.jpg",
+              propertyName: "Glasgow",
+              propertyRating: "4",
+              propertyCopy: "A property in the heart of London",
+              propertyCost: "500",
+              propertyFrequency: "PP/Night",
+            },
+            {
+              propertyImage: "/images/houses/house4.jpg",
+              propertyName: "Manchester",
+              propertyRating: "4.7",
+              propertyCopy: "A property in the heart of London",
+              propertyCost: "500",
+              propertyFrequency: "PP/Night",
+            },
+          ],
         },
-        {
-          propertyImage: "/images/houses/house4.jpg",
-          propertyName: "Manchester",
-          propertyRating: "4.7",
-          propertyCopy: "A property in the heart of London",
-          propertyCost: "500",
-          propertyFrequency: "PP/Night",
-        },
-        {
-          propertyImage: "/images/houses/house1.jpg",
-          propertyName: "London",
-          propertyRating: "2",
-          propertyCopy: "A property in the heart of London",
-          propertyCost: "500",
-          propertyFrequency: "PP/Night",
-        },
-        {
-          propertyImage: "/images/houses/house2.jpg",
-          propertyName: "Newcastle",
-          propertyRating: "4.7",
-          propertyCopy: "A property in the heart of London",
-          propertyCost: "500",
-          propertyFrequency: "PP/Night",
-        },
-        {
-          propertyImage: "/images/houses/house3.jpg",
-          propertyName: "Glasgow",
-          propertyRating: "4",
-          propertyCopy: "A property in the heart of London",
-          propertyCost: "500",
-          propertyFrequency: "PP/Night",
-        },
-        {
-          propertyImage: "/images/houses/house4.jpg",
-          propertyName: "Manchester",
-          propertyRating: "4.7",
-          propertyCopy: "A property in the heart of London",
-          propertyCost: "500",
-          propertyFrequency: "PP/Night",
-        },
+
       ],
     };
   },
