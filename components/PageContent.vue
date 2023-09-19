@@ -5,15 +5,17 @@
 </template>
 
 <script>
-import Hero from './Hero.vue';
-import Features from './Features.vue';
 import BaseSlider from './BaseSlider.vue';
+import FAQ from './FAQ.vue';
+import Features from './Features.vue';
+import Hero from './Hero.vue';
 
 export default {
     components: {
-        Hero,
-        Features,
         BaseSlider,
+        FAQ,
+        Features,
+        Hero,
     },
     props: {
         pageContent: {
