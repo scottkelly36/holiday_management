@@ -5,11 +5,7 @@
 </template>
 
 <script>
-import { SwiperSlide } from "swiper/vue";
 export default {
-  components: {
-    SwiperSlide,
-  },
   data() {
     return {
       pageContent: [

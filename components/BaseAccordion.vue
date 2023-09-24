@@ -46,7 +46,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing) var(--spacing-lg);
+  padding: var(--spacing) 0 var(--spacing) var(--spacing-lg);
 }
 
 .Accordion__heading .icon {

@@ -11,3 +11,8 @@ html {
     background-color: var(--white);
     font-family: var(--body);
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}
