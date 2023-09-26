@@ -1,7 +1,5 @@
 <template>
-    <main class="PageContent">
-        <component v-for="(PageContent, index) in pageContent" :is="PageContent.block" :key="index" :content="PageContent"/>
-    </main>
+    <component v-for="(PageContent, index) in pageContent" :is="PageContent.block" :key="index" :content="PageContent"/>
 </template>
 
 <script>
@@ -25,11 +23,3 @@ export default {
     }
 }
 </script>
-
-<style>
-@import '../assets/css/mixins/stack.css';
-
-    .PageContent {
-    @mixin stack var(--spacing-xl);
-    }
-</style>

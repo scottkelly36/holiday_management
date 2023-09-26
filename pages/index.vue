@@ -1,7 +1,5 @@
 <template>
-  <NavBar />
-    <PageContent :page-content="pageContent" />
-  <Footer />
+  <PageContent :page-content="pageContent" />
 </template>
 
 <script>
