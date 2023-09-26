@@ -1,11 +1,11 @@
 <template>
     <div class="BaseCarousel__container container">
-      <h2 v-if="content.heading">{{content.heading}}</h2>
-      <p class="text__small" v-if="content.desc">{{content.desc}}</p>
+      <h2 v-if="heading">{{heading}}</h2>
+      <p class="text__small" v-if="desc">{{desc}}</p>
       <swiper :slidesPerView="1"
       :spaceBetween="30"
       :loop="true">
-        <SwiperSlide v-for="(slide, index) in content.content" :key="index">
+        <SwiperSlide v-for="(slide, index) in slides" :key="index">
             <component :is="content.child" :content="slide"/>
         </SwiperSlide>
         <SliderNavigation />
@@ -31,6 +31,17 @@
       SwiperSlide,
       SliderNavigation,
       PropertyCard,
+    },
+    computed: {
+      heading() {
+        return this.content?.content?.heading;
+      },
+      desc() {
+        return this.content?.content?.desc;
+      },
+      slides() {
+        return this.content?.content?.slides;
+      },
     },
     data() {
       return {
