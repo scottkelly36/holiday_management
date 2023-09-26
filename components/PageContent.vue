@@ -23,3 +23,11 @@ export default {
     }
 }
 </script>
+
+<style>
+@import '../assets/css/mixins/stack.css';
+
+    .PageContent {
+    @mixin stack var(--spacing-xl);
+    }
+</style>

@@ -39,6 +39,8 @@ export default {
         {
           block: "BaseSlider",
           child: "PropertyCard",
+          heading: 'Interested in properties in Newcastle',
+          desc: 'Some of the top properties located around the Newcastle',
           content: [
             {
               propertyImage: "/images/houses/house1.jpg",

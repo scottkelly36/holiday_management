@@ -1,7 +1,7 @@
 <template>
     <div class="BaseCarousel__container container">
-      <h2>Swiper Title</h2>
-      <p class="text__small">Small Description of the swiper images</p>
+      <h2 v-if="content.heading">{{content.heading}}</h2>
+      <p class="text__small" v-if="content.desc">{{content.desc}}</p>
       <swiper :slidesPerView="1"
       :spaceBetween="30"
       :loop="true">
