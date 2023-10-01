@@ -12,5 +12,6 @@
 
     .PageContent {
     @mixin stack var(--spacing-xl);
+    min-height: 100vh;
     }
 </style>
