@@ -10,6 +10,7 @@ import Food from './icons/Food.vue';
 import Insta from './icons/Insta.vue';
 import Minus from './icons/Minus.vue';
 import Plus from './icons/Plus.vue';
+import Pool from './icons/Pool.vue';
 import Shield from './icons/Shield.vue';
 import Star from './icons/Star.vue';
 import Twitter from './icons/Twitter.vue';
@@ -24,6 +25,7 @@ export default {
         Insta,
         Minus,
         Plus,
+        Pool,
         Shield,
         Star,
         Twitter,
