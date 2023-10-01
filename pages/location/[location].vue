@@ -1,4 +1,5 @@
 <template>
+    <Filters />
     <div class="Location__heading container">
         <h1>properties in {{location}}</h1>
     </div>
@@ -11,7 +12,7 @@ export default {
         return {
             pageContent: [
                 {
-                    block: 'title'
+                    block: 'Title'
                 }
             ],            
         }
