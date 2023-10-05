@@ -40,6 +40,10 @@ export default {
                     name: 'Transport',
                     icon: 'Car',
                 },
+                {
+                    name: 'Local Food',
+                    icon: 'Food',
+                },
             ]
         }
     }
@@ -65,16 +69,15 @@ export default {
     @mixin stack var(--spacing-sm);
     justify-content: center;
     align-items: center;
-    row-gap: 1rem;
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     border: none;
     background: none;
 }
 
 .Filter__item .icon {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
 }
 
 </style>
