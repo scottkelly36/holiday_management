@@ -13,7 +13,9 @@
     "nuxt": "^3.7.1"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.4.11",
     "gsap": "^3.12.2",
+    "pinia": "^2.1.6",
     "postcss": "^8.4.29",
     "postcss-calc": "^9.0.1",
     "postcss-custom-media": "^10.0.0",
